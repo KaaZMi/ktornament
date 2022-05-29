@@ -1,0 +1,30 @@
+<h2>Ranking</h2>
+
+<div *ngIf="players.length == 0">
+  <p>No players, add one !</p>
+</div>
+<button routerLink="/add-player">Add player</button>
+
+<div *ngIf="players.length !== 0">
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th scope="col">Ranking</th>
+      <th scope="col">Pseudo</th>
+      <th scope="col">Points</th>
+      <th scope="col">Edit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let player of players">
+      <td>{{ player.ranking }}</td>
+      <td>{{ player.pseudo }}</td>
+      <td>{{ player.points }}</td>
+      <td>
+        <button routerLink="/edit-player/{{ player.id }}">Edit</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <button (click)="deletePlayers()">Delete players</button>
+</div>

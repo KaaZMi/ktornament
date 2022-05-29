@@ -1,0 +1,40 @@
+###
+POST http://127.0.0.1:8080/players
+Content-Type: application/json
+
+{
+  "pseudo": "toto"
+}
+
+###
+POST http://127.0.0.1:8080/players
+Content-Type: application/json
+
+{
+  "pseudo": "titi"
+}
+
+###
+POST http://127.0.0.1:8080/players
+Content-Type: application/json
+
+{
+  "pseudo": "tata"
+}
+
+###
+POST http://127.0.0.1:8080/players
+Content-Type: application/json
+
+{
+  "pseudo": "tutu"
+}
+
+###
+GET http://127.0.0.1:8080/players
+Accept: application/json
+
+
+###
+DELETE http://127.0.0.1:8080/players
+Accept: application/json
